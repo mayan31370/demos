@@ -1,0 +1,33 @@
+<html>
+<head>
+<script src="https://unpkg.com/h3-js"></script>
+<script src="https://unpkg.com/deck.gl@^8.0.0/dist.min.js"></script>
+</head>
+<body>
+<script>
+new deck.DeckGL({
+  mapStyle: 'https://basemaps.cartocdn.com/gl/positron-nolabels-gl-style/style.json',
+  controller: true,
+  layers: [
+    new deck.H3HexagonLayer({
+    id: 'h3-hexagon-layer',
+    data: [
+{"hex":"8001fffffffffff"},{"hex":"8003fffffffffff"},{"hex":"8005fffffffffff"},{"hex":"8007fffffffffff"},{"hex":"8009fffffffffff"},{"hex":"800bfffffffffff"},{"hex":"800dfffffffffff"},{"hex":"800ffffffffffff"},{"hex":"8011fffffffffff"},{"hex":"8013fffffffffff"},{"hex":"8015fffffffffff"},{"hex":"8017fffffffffff"},{"hex":"8019fffffffffff"},{"hex":"801bfffffffffff"},{"hex":"801dfffffffffff"},{"hex":"801ffffffffffff"},{"hex":"8021fffffffffff"},{"hex":"8023fffffffffff"},{"hex":"8025fffffffffff"},{"hex":"8027fffffffffff"},{"hex":"8029fffffffffff"},{"hex":"802bfffffffffff"},{"hex":"802dfffffffffff"},{"hex":"802ffffffffffff"},{"hex":"8031fffffffffff"},{"hex":"8033fffffffffff"},{"hex":"8035fffffffffff"},{"hex":"8037fffffffffff"},{"hex":"8039fffffffffff"},{"hex":"803bfffffffffff"},{"hex":"803dfffffffffff"},{"hex":"803ffffffffffff"},{"hex":"8041fffffffffff"},{"hex":"8043fffffffffff"},{"hex":"8045fffffffffff"},{"hex":"8047fffffffffff"},{"hex":"8049fffffffffff"},{"hex":"804bfffffffffff"},{"hex":"804dfffffffffff"},{"hex":"804ffffffffffff"},{"hex":"8051fffffffffff"},{"hex":"8053fffffffffff"},{"hex":"8055fffffffffff"},{"hex":"8057fffffffffff"},{"hex":"8059fffffffffff"},{"hex":"805bfffffffffff"},{"hex":"805dfffffffffff"},{"hex":"805ffffffffffff"},{"hex":"8061fffffffffff"},{"hex":"8063fffffffffff"},{"hex":"8065fffffffffff"},{"hex":"8067fffffffffff"},{"hex":"8069fffffffffff"},{"hex":"806bfffffffffff"},{"hex":"806dfffffffffff"},{"hex":"806ffffffffffff"},{"hex":"8071fffffffffff"},{"hex":"8073fffffffffff"},{"hex":"8075fffffffffff"},{"hex":"8077fffffffffff"},{"hex":"8079fffffffffff"},{"hex":"807bfffffffffff"},{"hex":"807dfffffffffff"},{"hex":"807ffffffffffff"},{"hex":"8081fffffffffff"},{"hex":"8083fffffffffff"},{"hex":"8085fffffffffff"},{"hex":"8087fffffffffff"},{"hex":"8089fffffffffff"},{"hex":"808bfffffffffff"},{"hex":"808dfffffffffff"},{"hex":"808ffffffffffff"},{"hex":"8091fffffffffff"},{"hex":"8093fffffffffff"},{"hex":"8095fffffffffff"},{"hex":"8097fffffffffff"},{"hex":"8099fffffffffff"},{"hex":"809bfffffffffff"},{"hex":"809dfffffffffff"},{"hex":"809ffffffffffff"},{"hex":"80a1fffffffffff"},{"hex":"80a3fffffffffff"},{"hex":"80a5fffffffffff"},{"hex":"80a7fffffffffff"},{"hex":"80a9fffffffffff"},{"hex":"80abfffffffffff"},{"hex":"80adfffffffffff"},{"hex":"80affffffffffff"},{"hex":"80b1fffffffffff"},{"hex":"80b3fffffffffff"},{"hex":"80b5fffffffffff"},{"hex":"80b7fffffffffff"},{"hex":"80b9fffffffffff"},{"hex":"80bbfffffffffff"},{"hex":"80bdfffffffffff"},{"hex":"80bffffffffffff"},{"hex":"80c1fffffffffff"},{"hex":"80c3fffffffffff"},{"hex":"80c5fffffffffff"},{"hex":"80c7fffffffffff"},{"hex":"80c9fffffffffff"},{"hex":"80cbfffffffffff"},{"hex":"80cdfffffffffff"},{"hex":"80cffffffffffff"},{"hex":"80d1fffffffffff"},{"hex":"80d3fffffffffff"},{"hex":"80d5fffffffffff"},{"hex":"80d7fffffffffff"},{"hex":"80d9fffffffffff"},{"hex":"80dbfffffffffff"},{"hex":"80ddfffffffffff"},{"hex":"80dffffffffffff"},{"hex":"80e1fffffffffff"},{"hex":"80e3fffffffffff"},{"hex":"80e5fffffffffff"},{"hex":"80e7fffffffffff"},{"hex":"80e9fffffffffff"},{"hex":"80ebfffffffffff"},{"hex":"80edfffffffffff"},{"hex":"80effffffffffff"},{"hex":"80f1fffffffffff"},{"hex":"80f3fffffffffff"}
+      ],
+    getHexagon: d => d.hex,
+    getFillColor: d => [255, 0, 0],
+    getElevation: d => 0,
+    coverage: 0.8,
+    highPrecision: true
+  })
+  ],
+  initialViewState: {
+    longitude: 109.942141,
+    latitude: 39.828776,
+    zoom: 5,
+    pitch: 0,
+    bearing: 0
+  }
+});
+</script>
+</body>
